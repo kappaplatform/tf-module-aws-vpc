@@ -11,7 +11,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   type        = set(string)
   description = "The availability zones that should be assigned to the subnets in the VPC. Region is determined by the terraform provider configuration."
-  default     = toset(["a", "b", "c"])
+  default     = ["a", "b", "c"]
 
   validation {
     condition     = length(var.availability_zones) == 3
